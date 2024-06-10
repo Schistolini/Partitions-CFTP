@@ -1,0 +1,129 @@
+\documentclass[11pt]{article}
+\usepackage{
+	graphicx,
+	epstopdf,
+	fancyhdr,
+	amsfonts,
+	amsthm,
+	amsmath,
+	algorithm,
+	algorithmic,
+	xspace,
+	hyperref,
+	setspace}
+	
+\usepackage[left=1in,top=1in,right=1in,bottom=1in]{geometry}
+\usepackage{sect sty}	%For centering section headings
+\usepackage{enumerate}	%Allows more labeling options for enumerate environments 
+\usepackage{epsfig}
+\usepackage[space]{grffile}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{ amssymb }
+
+\usepackage{minted} % For showing snippets of code
+% This will set LaTeX to look for figures in the same directory as the .tex file
+%\usemintedstyle{mathematica}
+\graphicspath{.} % The dot means current directory.
+
+\pagestyle{fancy}
+
+\lhead{\YOURID}
+%\chead{Problem Set \RRNumber }
+\rhead{\today}
+\lfoot{MATH 457: Partition Theory}
+\cfoot{\thepage}
+\rfoot{Spring 2024}
+
+% Some commands for changing header and footer format
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\headwidth}{\textwidth}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\setlength{\parindent}{1.27cm}
+
+\newcommand{\YOURID}{Sam Chistolini}	% Replace "Your Name Here" with your name
+\newcommand{\RRNumber}{6}	% Replace 0 with the actual problem set #
+\newcommand{\ProblemHeader}	% Don't change this!
+
+% Increase the spacing a bit:
+\setstretch{2.0}
+
+\usepackage{titlesec}
+\titleformat*{\section}{\LARGE\bfseries}
+\titleformat*{\subsection}{\Large\bfseries}
+\titleformat*{\subsubsection}{\large\bfseries}
+\titleformat*{\paragraph}{\large\bfseries}
+\titleformat*{\subparagraph}{\large\bfseries}
+
+\newenvironment{question}[2][Question]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem*{theorem*}{Theorem}
+\newtheorem{maintheorem}{Theorem}
+\renewcommand{\themaintheorem}{\Alph{maintheorem}}
+\newtheorem*{maintheorem*}{Main Theorem}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{setting}[theorem]{Setting}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{identity}[theorem]{Identity}
+\newtheorem{remark}[theorem]{Remark}
+%\newtheorem{question}[theorem]{Question}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{fact}[theorem]{Fact}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem*{note}{Note}
+\newtheorem{construction}[theorem]{Construction}
+\newtheorem{example}{Example}
+
+
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\LT}{\texttt{LT}}
+\newcommand{\LM}{\texttt{LM}}
+\newcommand{\mP}{\mathbb{P}}
+
+% It sucks doing the rangle langle stuff so this command does that for you
+
+\newcommand{\ideal}[1]{\ensuremath{\left\langle #1 \right\rangle}}
+
+% For cancellation lines 
+\usepackage{cancel}
+\newcommand{\bigO}[1]{\ensuremath{\Oc\left( #1 \right)}}
+
+\newcommand{\ve}{\varepsilon}
+\usepackage{enumitem}
+
+\usepackage{mathrsfs} % for mathscr
+\usepackage{mathtools} % injection symbol
+
+\newcommand{\floor}[1]{\ensuremath{\left\lfloor #1 \right\rfloor}}
+
+ 
+ % Bijection symbol
+ \newcommand{\Oc}{\mathcal{O}}
+ \newcommand{\bijectarrow}{%
+  \hookrightarrow\mathrel{\mspace{-15mu}}\rightarrow
+}
+
+\newcommand{\surjectarrow}{%
+  \rightarrow\mathrel{\mspace{-15mu}}\rightarrow
+}
+ % Roman numerals:
+ \newcommand*{\rom}[1]{\expandafter\@slowromancap\romannumeral #1@}
+ 
+\usepackage{ stmaryrd }
+\usepackage[style=ieee,maxbibnames=8]{biblatex}
+
+
+\addbibresource{references.bib}
+
+\usepackage{algpseudocode}
